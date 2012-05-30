@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/112/trunk/iv1201_projekt/src/main/java/org/kth/validation
+END
+NoDuplicateCompetenceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/112/trunk/iv1201_projekt/src/main/java/org/kth/validation/NoDuplicateCompetenceValidator.java
+END
+DateAvailabilitiesValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/112/trunk/iv1201_projekt/src/main/java/org/kth/validation/DateAvailabilitiesValidator.java
+END
+DateAvailabilities.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/112/trunk/iv1201_projekt/src/main/java/org/kth/validation/DateAvailabilities.java
+END
+NoDuplicateCompetence.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/112/trunk/iv1201_projekt/src/main/java/org/kth/validation/NoDuplicateCompetence.java
+END

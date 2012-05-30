@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/110/trunk/iv1201_projekt/src/main/webapp/WEB-INF/classes/properties
+END
+strings_sv.properties
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/110/trunk/iv1201_projekt/src/main/webapp/WEB-INF/classes/properties/strings_sv.properties
+END
+months_sv.properties
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/100/trunk/iv1201_projekt/src/main/webapp/WEB-INF/classes/properties/months_sv.properties
+END
+category.properties
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/110/trunk/iv1201_projekt/src/main/webapp/WEB-INF/classes/properties/category.properties
+END
+category_sv.properties
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/93/trunk/iv1201_projekt/src/main/webapp/WEB-INF/classes/properties/category_sv.properties
+END
+months.properties
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/100/trunk/iv1201_projekt/src/main/webapp/WEB-INF/classes/properties/months.properties
+END
+strings.properties
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/110/trunk/iv1201_projekt/src/main/webapp/WEB-INF/classes/properties/strings.properties
+END

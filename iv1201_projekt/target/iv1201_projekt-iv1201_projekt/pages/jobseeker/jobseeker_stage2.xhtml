@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:disp="http://java.sun.com/jsf/composite/display"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <h:head>
+        <h:outputStylesheet name="styles/generalStyle.css" />
+        <title>#{str.addApplication}</title>
+
+        <c:if test="#{jobSeeker.loggedin==false}" >
+                <meta http-equiv="REFRESH" content="0;url=../page_login.xhtml"/>
+        </c:if>
+    </h:head>
+    <h:body>
+        <c:if test="#{jobSeeker.loggedin==true}" >
+            <div id="north">
+                <disp:page_north head="#{str.addApplication} #{str.stage} 2" />
+            </div>
+            <div id="center">
+                <h3>#{str.enterCompetences}</h3>
+                <div style="color:red"><h:messages id="validationErrors" /></div>
+                <h:form>
+                    <table>
+                        <thead>
+                            <tt>
+                                <th>#{str.competenceCategory}</th>
+                                <th>#{str.monthsOfExperience}</th>
+                                <th>#{str.addRemove}</th>
+                            </tt>
+                        </thead>
+                        <tbody>
+                            <ui:repeat value="#{jobSeeker.competenceList}" var="competence" varStatus="status">
+                                <tr>
+                                    <td>
+                                        #{competence.categoryName}
+                                    </td>
+                                    <td>
+                                        #{competence.numberOfMonths}
+                                    </td>
+                                    <td>
+                                        <h:commandButton value="#{str.remove}" action="#{jobSeeker.removeCompetence(status.index)}" />
+                                    </td>
+                                </tr>
+                            </ui:repeat>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>
+                                    <h:selectOneMenu value ="#{jobSeeker.competenceCategory}">
+                                        <f:selectItems value="#{jobSeeker.allCompetenceCategories}" />
+                                    </h:selectOneMenu>                           
+                                </td>
+                                <td>
+                                    <h:inputText value="#{jobSeeker.numberOfMonths}" />
+                                </td>
+                                <td>
+                                    <h:commandButton value="#{str.add}" action="#{jobSeeker.addCompetence}" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <h:commandLink action="#{jobSeeker.goToStage(1)}">&lt; #{str.previous}  #{str.stage}</h:commandLink>
+                                </td>
+                                <td align="right">
+                                    <h:commandLink action="#{jobSeeker.goToStage(3)}">#{str.next} #{str.stage}&gt;</h:commandLink>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </h:form>
+            </div>
+            <div id="south">
+                <disp:page_south head="#{str.stage} 2 #{str.of} 4" />
+            </div>
+        </c:if>
+    </h:body>
+</html>
+

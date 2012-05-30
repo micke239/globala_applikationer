@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:c="http://java.sun.com/jsp/jstl/core"
+    xmlns:disp="http://java.sun.com/jsf/composite/display">
+    <h:head>
+        <h:outputStylesheet name="styles/generalStyle.css" />
+        <title>
+            #{str.welcomeToTheRecruitingTool}
+        </title>
+    </h:head>
+
+    <h:body>
+        
+        <div id="north">
+            <disp:page_north head="#{str.welcomeToTheRecruitingTool}" />
+        </div>
+            <div id="center">
+                <table>
+                    <tr><td>
+                    <h:form>
+                        <table>
+                        <tr>
+                        <td><h:outputText value="#{str.enterLoginId}" /></td>
+                        <td><h:inputText id="username" 
+                        value="#{index.username}" required="true"/>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td><h:outputText value="#{str.enterPassword}" /></td>
+                        <td><h:inputSecret id="password" 
+                        value="#{index.password}" required="true" />
+                        </td>
+                        </tr>
+                        <tr>
+                        <td> </td>
+                        <td><h:commandButton value="#{str.login}" 
+                        action="#{index.doLogin}"/>
+                        </td>
+                        </tr>
+                        </table>
+                    </h:form>
+                   </td>
+                        <h:form>
+                        <td> <h:commandLink value="#{str.addApplication}" action="#{index.createApplication}"/></td>
+                        </h:form>
+                   </tr>
+                </table>
+            </div>
+        <div id="south">
+            <disp:page_south head="" />
+        </div>
+    </h:body>
+</html>

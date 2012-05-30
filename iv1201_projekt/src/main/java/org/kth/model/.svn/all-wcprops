@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/121/trunk/iv1201_projekt/src/main/java/org/kth/model
+END
+AccountManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/113/trunk/iv1201_projekt/src/main/java/org/kth/model/AccountManager.java
+END
+PDFManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/110/trunk/iv1201_projekt/src/main/java/org/kth/model/PDFManager.java
+END
+SearchManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/121/trunk/iv1201_projekt/src/main/java/org/kth/model/SearchManager.java
+END
+CompetenceManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/109/trunk/iv1201_projekt/src/main/java/org/kth/model/CompetenceManager.java
+END
+LoginManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/109/trunk/iv1201_projekt/src/main/java/org/kth/model/LoginManager.java
+END
+SearchParameters.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/119/trunk/iv1201_projekt/src/main/java/org/kth/model/SearchParameters.java
+END
+DAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/122/trunk/iv1201_projekt/src/main/java/org/kth/model/DAO.java
+END

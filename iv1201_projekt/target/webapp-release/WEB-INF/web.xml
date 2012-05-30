@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+    <display-name>release</display-name>
+	
+    <!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/appContext.xml</param-value>
+    </context-param>
+    
+     <!-- Supposodly required by JSF navigation rules //Niko -->
+    <context-param> 
+        <param-name>javax.faces.CONFIG_FILES</param-name> 
+        <param-value>/WEB-INF/faces-config.xml,/WEB-INF/faces-beans.xml</param-value> 
+    </context-param>
+    
+    <!-- location of log4j config file -->
+    <context-param>
+            <param-name>log4jConfigLocation</param-name>
+            <param-value>/WEB-INF/log4j.xml</param-value>
+    </context-param>
+
+    <!-- applies log4j configuration -->
+    <listener>
+            <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+    </listener>
+	
+    <!-- Creates the Spring Container shared by all Servlets and Filters -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    
+    <listener>
+        <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+    </listener>
+  	
+    <!-- JSF mapping -->
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+  
+    <!-- Map these files with JSF -->
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Welcome page -->
+    <welcome-file-list>
+        <welcome-file>faces/pages/page_login.xhtml</welcome-file>
+    </welcome-file-list>
+    
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/faces/pages/error.xhtml</location>
+    </error-page>
+</web-app>

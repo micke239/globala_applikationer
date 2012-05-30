@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/119/trunk/iv1201_projekt/src/main/java/org/kth/model/database
+END
+Timeperiod.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/119/trunk/iv1201_projekt/src/main/java/org/kth/model/database/Timeperiod.java
+END
+Account.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/119/trunk/iv1201_projekt/src/main/java/org/kth/model/database/Account.java
+END
+Recruiter.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/119/trunk/iv1201_projekt/src/main/java/org/kth/model/database/Recruiter.java
+END
+Competence.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/113/trunk/iv1201_projekt/src/main/java/org/kth/model/database/Competence.java
+END
+Competencecategory.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/113/trunk/iv1201_projekt/src/main/java/org/kth/model/database/Competencecategory.java
+END
+Person.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/119/trunk/iv1201_projekt/src/main/java/org/kth/model/database/Person.java
+END
+Jobapplication.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/113/trunk/iv1201_projekt/src/main/java/org/kth/model/database/Jobapplication.java
+END
+Jobseeker.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/113/trunk/iv1201_projekt/src/main/java/org/kth/model/database/Jobseeker.java
+END

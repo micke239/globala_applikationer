@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="pages/jobseeker/jobseeker_stage1.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="pages/jobseeker/jobseeker_stage4.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="pages/jobseeker/jobseeker_stage3.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="pages/jobseeker/jobseeker_stage2.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="resources/display/page_east.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="pages/error.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="pages/recruiter/recruiter_stage2.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="resources/display/page_south.xhtml" x="650" y="450" zoom="true"/>
+        <Node id="resources/display/page_west.xhtml" x="900" y="300" zoom="true"/>
+        <Node id="pages/recruiter/recruiter_stage1.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="resources/display/page_north.xhtml" x="150" y="600" zoom="true"/>
+        <Node id="pages/wrong_pass.xhtml" x="650" y="300" zoom="true"/>
+        <Node id="pages/page_login.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="pages/jobseeker/jobseeker_done.xhtml" x="400" y="600" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

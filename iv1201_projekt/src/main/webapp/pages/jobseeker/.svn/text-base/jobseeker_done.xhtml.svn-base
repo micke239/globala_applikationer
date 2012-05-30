@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:disp="http://java.sun.com/jsf/composite/display"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <h:head>
+        <h:outputStylesheet name="styles/generalStyle.css" />
+        <title>#{str.thankYouForYourApplication}</title>
+            <meta http-equiv="REFRESH" content="5;url=../page_login.xhtml"/>
+    </h:head>
+    <h:body>
+        <div id="north">
+            <disp:page_north head="#{str.addApplication}" />
+        </div>
+        <div id="center">
+            <h3>#{str.thankYouForYourApplication}</h3>
+            <p>#{str.youWillBeContacted}</p>
+        </div>
+        <div id="south">
+            <disp:page_south head="" />
+        </div>
+    </h:body>
+</html>
+

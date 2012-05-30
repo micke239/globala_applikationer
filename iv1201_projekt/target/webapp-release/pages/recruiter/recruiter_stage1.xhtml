@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:disp="http://java.sun.com/jsf/composite/display">
+    <h:head>
+        <h:outputStylesheet name="styles/generalStyle.css" />
+        <title>Recruiter Form</title>
+
+        <c:if test="#{index.isloggedin==false}" >
+            <meta http-equiv="REFRESH" content="0;url=page_login.xhtml"/>
+        </c:if>
+    </h:head>
+    <h:body>
+        <c:if test="#{index.isloggedin==true}" >
+            <div id="north">
+                <disp:page_north head="#{str.searchForApplications}" />
+            </div>
+            <div id="center">
+                <h:form>
+                    <table>
+                        <tr>
+                            <td>
+                                #{str.startDate}
+                            </td>
+                            <td>
+                                <h:selectBooleanCheckbox id="sDateEnabled" value="#{recruiter.startDateEnabled}"/>
+                                <h:selectOneMenu id="startDateDay" value="#{recruiter.startDateDay}">
+                                    <f:selectItems value="#{recruiter.dayList}" />
+                                </h:selectOneMenu>
+                                <h:selectOneMenu id="startDateMonth" value="#{recruiter.startDateMonth}">
+                                    <f:selectItems value="#{recruiter.monthList}" />
+                                </h:selectOneMenu> 
+                                <h:selectOneMenu id="startDateYear" value="#{recruiter.startDateYear}">
+                                    <f:selectItems value="#{recruiter.yearList}" />
+                                </h:selectOneMenu>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                #{str.endDate}
+                            </td>
+                            <td>
+                                <h:selectBooleanCheckbox id="eDateEnabled" value="#{recruiter.endDateEnabled}"/>
+                                <h:selectOneMenu id="endDateDay" value="#{recruiter.endDateDay}">
+                                    <f:selectItems value="#{recruiter.dayList}" />
+                                </h:selectOneMenu>
+                                <h:selectOneMenu id="endDateMonth" value="#{recruiter.endDateMonth}">
+                                    <f:selectItems value="#{recruiter.monthList}" />
+                                </h:selectOneMenu> 
+                                <h:selectOneMenu id="endDateYear" value="#{recruiter.endDateYear}">
+                                    <f:selectItems value="#{recruiter.yearList}" />
+                                </h:selectOneMenu> 
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                #{str.dateOfRegistration}
+                            </td>
+                            <td>
+                                <h:selectBooleanCheckbox id="rDateEnabled" value="#{recruiter.regDateEnabled}"/>
+                                <h:selectOneMenu id="regDateDay" value="#{recruiter.regDateDay}">
+                                    <f:selectItems value="#{recruiter.dayList}" />
+                                </h:selectOneMenu>
+                                <h:selectOneMenu id="regDateMonth" value="#{recruiter.regDateMonth}">
+                                    <f:selectItems value="#{recruiter.monthList}" />
+                                </h:selectOneMenu> 
+                                <h:selectOneMenu id="regDateYear" value="#{recruiter.regDateYear}">
+                                    <f:selectItems value="#{recruiter.yearList}" />
+                                </h:selectOneMenu> 
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                #{str.competence}
+                            </td>
+                            <td>
+                                <h:selectOneMenu value ="#{recruiter.competence}">
+                                    <f:selectItems value="#{recruiter.competenceList}" />
+                                </h:selectOneMenu>      
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                               #{str.firstName}
+                            </td><td>
+                                
+                                <h:inputText id="firstName" value="#{recruiter.firstName}"/>
+                            </td>
+                        </tr>
+                        <br/>
+                        <tr>
+                            <td>
+                                #{str.lastName}
+                            </td><td>
+                                <h:inputText id="lastName" value="#{recruiter.lastName}"/>
+                            </td>
+                        </tr>
+                        <br/>
+                        <tr>
+                            <td>
+                                #{str.nToShow}
+                            </td><td>
+                                <h:inputText id="itemsShown" value="#{recruiter.itemsShown}"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h:commandButton value="#{str.search}" action="#{recruiter.conductSearch}"/>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                    <!-- Dynamic rows with applications-->
+
+                    <b>#{str.searchResults}</b>
+                    <h:column>  
+                        <f:facet name="header">  
+                            <h:outputText value="Search Results" />  
+                        </f:facet>  
+
+                        <h:dataTable value="#{recruiter.applicationList}" var="loc">
+                            <h:column>
+                                <f:facet name="header" >
+                                    <h:outputText value="#{str.firstName}"/>
+                                </f:facet>   
+                                <h:commandLink action="#{recruiter.chooseApplication}">  
+                                        <h:outputText value="#{loc.FName}" />  
+                                        <f:setPropertyActionListener target="#{recruiter.chosenUser}" value="#{loc.UName}" />
+                                        <!-- <f:param name="chosenApplication" value="testestets" />   -->
+                                </h:commandLink>  
+                                    
+                                
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header" >
+                                    <h:outputText value="#{str.lastName}"/>
+                                </f:facet>    
+                                <h:outputText value="#{loc.LName}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header" >
+                                    <h:outputText value="#{str.dateOfRegistration}"/>
+                                </f:facet>    
+                                <h:outputText value="#{loc.dateOfRegistration}"/>
+                            </h:column>
+
+                        </h:dataTable>  
+                    </h:column>
+                    <!-- Previous/Next buttons    -->
+                    <br/>
+                    <h:commandButton value="#{str.previous}" disabled="#{recruiter.pageCounter == 0}" action="#{recruiter.previousPage}"/>
+                    <h:commandButton value="#{str.next}" disabled="#{recruiter.pageCounter == recruiter.maxPageCount}" action="#{recruiter.nextPage}"/>
+                    <h:outputText value="#{str.page}"/>
+                    <h:outputText value="#{recruiter.pageCounter}"/>
+                </h:form>
+
+
+
+            </div>
+            <div id="south">
+                <disp:page_south head="" />
+            </div>
+        </c:if>
+    </h:body>
+</html>
+

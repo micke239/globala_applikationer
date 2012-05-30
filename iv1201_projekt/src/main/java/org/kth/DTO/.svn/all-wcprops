@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/119/trunk/iv1201_projekt/src/main/java/org/kth/DTO
+END
+NewJobSeekerStageTwoDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/119/trunk/iv1201_projekt/src/main/java/org/kth/DTO/NewJobSeekerStageTwoDTO.java
+END
+EntityTimePeriodDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/108/trunk/iv1201_projekt/src/main/java/org/kth/DTO/EntityTimePeriodDTO.java
+END
+FullJobapplicationDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/110/trunk/iv1201_projekt/src/main/java/org/kth/DTO/FullJobapplicationDTO.java
+END
+NewJobSeekerStageThreeDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/119/trunk/iv1201_projekt/src/main/java/org/kth/DTO/NewJobSeekerStageThreeDTO.java
+END
+DateAvailabilityDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/113/trunk/iv1201_projekt/src/main/java/org/kth/DTO/DateAvailabilityDTO.java
+END
+CompetenceDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/113/trunk/iv1201_projekt/src/main/java/org/kth/DTO/CompetenceDTO.java
+END
+ApplicationRowDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/108/trunk/iv1201_projekt/src/main/java/org/kth/DTO/ApplicationRowDTO.java
+END
+NewJobSeekerStageOneDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/108/trunk/iv1201_projekt/src/main/java/org/kth/DTO/NewJobSeekerStageOneDTO.java
+END
+EntityCompetenceDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/108/trunk/iv1201_projekt/src/main/java/org/kth/DTO/EntityCompetenceDTO.java
+END

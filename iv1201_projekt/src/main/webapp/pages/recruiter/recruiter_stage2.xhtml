@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:disp="http://java.sun.com/jsf/composite/display">
+    <h:head>
+        <h:outputStylesheet name="styles/generalStyle.css" />
+        <title>#{str.applicationDetails}</title>
+
+        <c:if test="#{index.isloggedin==false}" >
+            <meta http-equiv="REFRESH" content="0;url=page_login.xhtml"/>
+        </c:if>
+        <c:if test="#{recruiter.donestage1==false}" >
+                <meta http-equiv="REFRESH" content="0;url=recruiter_stage1.xhtml"/>
+        </c:if>
+ 
+    </h:head>
+    <h:body>
+        <c:if test="#{index.isloggedin==true}" >
+            <div id="north">
+                <disp:page_north head="#{str.chosenApplication}" />
+            </div>
+            <div id="center">
+                <h:form>
+                    
+                    <table>
+                        <tr>
+                            <td>
+                                #{str.firstName}
+                            </td><td>
+                                
+                                <h:outputText id="firstName" value="#{recruiter.currentApplication.firstName}"/>
+                            </td>
+                        </tr>
+                        <br/>
+                        <tr>
+                            <td>
+                                #{str.lastName}
+                            </td><td>
+                                <h:outputText id="lastName" value="#{recruiter.currentApplication.lastName}"/>
+                            </td>
+                        </tr>
+                        <br/>
+                        <tr>
+                            <td>
+                                #{str.userName}
+                            </td><td>
+                                <h:outputText id="userName" value="#{recruiter.currentApplication.userName}"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                #{str.eMail}
+                            </td><td>
+                                <h:outputText id="email" value="#{recruiter.currentApplication.email}"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                #{str.dateOfRegistration}
+                            </td><td>
+                                <h:outputText id="dor" value="#{recruiter.currentApplication.dateOfRegistration}"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                #{str.accepted} 
+                            </td><td>
+                                <h:outputText id="accepted" value="#{recruiter.currentApplication.accepted}"/>
+                            </td>
+                        </tr>
+                        
+                    </table> 
+                    #{str.statedExperience}
+                    <br/>
+                    <h:dataTable value="#{recruiter.currentApplication.localeCompetenceList}" var="cl">
+                            <h:column>
+                                <f:facet name="header" >
+                                    <h:outputText value="#{str.category}"/>
+                                </f:facet>   
+                                <h:outputText value="#{cl.categoryName}"/>
+
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header" >
+                                    <h:outputText value="#{str.nMonths} "/>
+                                </f:facet>    
+                                <h:outputText value="#{cl.numberOfMonths}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header" >
+                                    <h:outputText value="Comment "/>
+                                </f:facet>    
+                                <h:outputText value="#{cl.comment}"/>
+                            </h:column>
+                    </h:dataTable> 
+
+                    #{str.availableTimePeriods} 
+                    <br/>
+                    <h:dataTable value="#{recruiter.currentApplication.timePeriods}" var="tp">
+                            <h:column>
+                                <f:facet name="header" >
+                                    <h:outputText value="#{str.startDate}            "/>
+                                </f:facet>   
+                                <h:outputText value="#{tp.startDateString}"/>
+                                
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header" >
+                                    <h:outputText value="#{str.endDate} "/>
+                                </f:facet>    
+                                <h:outputText value="#{tp.endDateString}"/>
+                            </h:column>
+                    </h:dataTable>
+                    
+                    <h:commandButton value="PDF!!" 
+                        action="#{recruiter.downloadPdf()}"/>
+                    <h:commandButton value="#{str.accept}" 
+                                     action="#{recruiter.approveJobSeeker()}"/>
+                    <h:commandButton value="#{str.unAccept}" 
+                                     action="#{recruiter.unApproveJobSeeker()}"/>
+                </h:form>
+            </div>
+            <div id="south">
+                <disp:page_south head="" />
+            </div>
+        </c:if>
+    </h:body>
+</html>
+
